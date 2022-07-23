@@ -1,21 +1,19 @@
+// necessary packages
 const express = require('express');
-// const notes = require('./db/db.json');
 const path = require('path');
 const PORT = 3001;
 
 const app = express();
 const apiRoute = require('./routes/apiroutes')
 
-
+// code to run api in browser
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 console.log(__dirname)
 
 app.use("/api", apiRoute)
 app.use(express.static('public'));
-// app.get('/', (req, res) => {
-//     res.send('Hi there!');
-// });
+
 
 
 app.get('/notes', (req, res) => {
