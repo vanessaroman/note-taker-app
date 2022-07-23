@@ -1,7 +1,7 @@
 // necessary packages
 const express = require('express');
 const path = require('path');
-const PORT = "";
+
 
 const app = express();
 const apiRoute = require('./routes/apiroutes')
@@ -20,7 +20,8 @@ app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/notes.html'))
 });
 
+app.listen(process.env.PORT || 3001)
 
-app.listen(PORT, () => {
-    console.log(`Now listening on port: ${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.log(`Now listening on port: ${PORT}`);
+// });
