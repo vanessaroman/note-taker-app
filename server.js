@@ -15,11 +15,11 @@ app.use("/api", apiRoute)
 app.use(express.static('public'));
 
 
-
 app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/notes.html'))
 });
 
+// ensures that heroku will be able to add its own port once deployed.
 app.listen(process.env.PORT || 3001)
 
 // app.listen(PORT, () => {
