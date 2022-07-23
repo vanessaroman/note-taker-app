@@ -1,7 +1,7 @@
 // necessary packages
 const express = require('express');
 const path = require('path');
-const PORT = 3001;
+const PORT = 5000;
 
 const app = express();
 const apiRoute = require('./routes/apiroutes')
